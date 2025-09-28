@@ -10,10 +10,7 @@ permissions:
   pull-requests: write
   id-token: write 
 
-name: Azure Login (Service Principal)
-      uses: azure/login@v2
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
   
 
 jobs:
@@ -24,6 +21,12 @@ jobs:
     environment: dev
 
     steps:
+
+      - name: Azure Login (Service Principal)
+        uses: azure/login@v2
+        with:
+         creds: ${{ secrets.AZURE_CREDENTIALS }}
+
       - name: Checkout code
         uses: actions/checkout@v5
         with:
