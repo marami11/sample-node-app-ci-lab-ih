@@ -10,7 +10,7 @@ permissions:
   checks: write
   pull-requests: write
   # If you plan to switch to OIDC later, keep id-token: write
-  id-token: write
+  #id-token: write
 
 jobs:
   build-test-and-deploy:
