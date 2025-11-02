@@ -42,7 +42,7 @@ jobs:
       - name: Build (optional)
         run: npm run build 2>/dev/null || echo "No build step; continuing."
 
-      - name: Azure Login (Service Principal)
+      - name: Azure Login (OIDC)
         # If you adopt OIDC later, drop client-secret and configure federated creds
         uses: azure/login@v2
         with:
